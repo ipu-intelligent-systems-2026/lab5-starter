@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lab5-starter"
+version = "0.2.0"
+description = "Week 5 Lab: Evaluation, Guardrails & LLM Reliability"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=1.0.0",
+    "pydantic>=2.6,<3",
+    "pytest>=8.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
